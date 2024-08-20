@@ -17,6 +17,8 @@ async function getData() {
   return data;
 }
 
+export const dynamic = "force-dynamic";
+
 const AllProducts = async () => {
   const data: simplifiedProduct[] = await getData();
   return (
