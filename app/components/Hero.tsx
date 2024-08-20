@@ -12,6 +12,8 @@ async function getData() {
   return data;
 }
 
+export const dynamic = "force-dynamic";
+
 const Hero = async () => {
   // recieveing data in frontend
   const data = await getData();
