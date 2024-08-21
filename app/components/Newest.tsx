@@ -62,7 +62,7 @@ const Newest = async () => {
                     <h3 className="text-[15px] text-gray-700 md:text-lg lg:text-xl">
                       {product.name}
                     </h3>
-                    <p className="mt-1 text-sm text-gray-500 md:text-lg lg:text-xl">
+                    <p className="mt-1 text-sm text-gray-500">
                       {product.CategoryName}
                     </p>
                   </div>
