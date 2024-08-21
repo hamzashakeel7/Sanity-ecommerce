@@ -30,7 +30,7 @@ const CategoryPage = async ({ params }: { params: { category: string } }) => {
           </h2>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {data.map((product) => (
             <div key={product._id} className="group relative">
               <Link
@@ -48,12 +48,14 @@ const CategoryPage = async ({ params }: { params: { category: string } }) => {
                 </div>
                 <div className="flex justify-between mt-4">
                   <div>
-                    <h3 className="text-lg text-gray-700">{product.name}</h3>
+                    <h3 className="text-sm text-gray-700 md:text-lg lg:text-xl">
+                      {product.name}
+                    </h3>
                     <p className="mt-1 text-sm text-gray-500">
                       {product.CategoryName}
                     </p>
                   </div>
-                  <p className="font-medium text-sm text-gray-900">
+                  <p className="font-medium text-sm md:text-lg lg:text-lg text-gray-900">
                     RS {product.price}
                   </p>
                 </div>

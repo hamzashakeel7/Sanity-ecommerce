@@ -41,7 +41,7 @@ const Newest = async () => {
           </Link>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {data.map((product) => (
             <div key={product._id} className="group relative">
               <Link
@@ -59,8 +59,10 @@ const Newest = async () => {
                 </div>
                 <div className="flex justify-between mt-4">
                   <div>
-                    <h3 className="text-lg text-gray-700">{product.name}</h3>
-                    <p className="mt-1 text-sm text-gray-500">
+                    <h3 className="text-[15px] text-gray-700 md:text-lg lg:text-xl">
+                      {product.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-500 md:text-lg lg:text-xl">
                       {product.CategoryName}
                     </p>
                   </div>
