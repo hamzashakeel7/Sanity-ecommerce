@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { client, urlFor } from "../lib/sanity";
 import Link from "next/link";
 
@@ -56,29 +56,14 @@ const Hero = async () => {
             />
           </div>
         </div>
-      </div>
 
-      {/* links */}
-      <div className="flex flex-col items-center justify-between gap-8 md:flex-row ">
-        <div className="flex h-12 w-64 divide-x overflow-hidden rounded-lg border">
-          <Link
-            href="/men"
-            className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
-          >
-            Men
-          </Link>
-          <Link
-            href="/women"
-            className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
-          >
-            Women
-          </Link>
-          <Link
-            href="/teens"
-            className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
-          >
-            Teens
-          </Link>
+        <div className="mt-10">
+          <p className="md:text-lg">
+            © Developed by{" "}
+            <Link href="https://www.webwizdurrani.com" className="text-primary">
+              webwizdurrani.com
+            </Link>{" "}
+          </p>
         </div>
       </div>
     </section>

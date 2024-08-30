@@ -75,6 +75,15 @@ const Newest = async () => {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 px-6 lg:mx-80">
+        <p className="lg:text-lg">
+          © Developed by{" "}
+          <Link href="https://www.webwizdurrani.com" className="text-primary">
+            webwizdurrani.com
+          </Link>{" "}
+        </p>
+      </div>
     </div>
   );
 };
