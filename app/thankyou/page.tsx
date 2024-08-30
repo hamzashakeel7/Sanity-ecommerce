@@ -33,9 +33,11 @@ const ThankYou = () => {
   return (
     <>
       <Confetti width={windowScreen.width} height={windowScreen.height} />
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className="text-3xl font-bold">Thank You for Your Purchase!</h1>
-        <p className="mt-4 text-lg">
+      <div className="flex flex-col items-center justify-center h-screen p-5">
+        <h1 className="text-3xl font-bold text-center">
+          Thank You for Your Purchase!
+        </h1>
+        <p className="mt-4 text-lg text-center">
           Your order has been received and you will soon receive a confirmation
           call.
         </p>
