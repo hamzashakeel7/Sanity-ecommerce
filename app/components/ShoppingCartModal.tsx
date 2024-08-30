@@ -86,7 +86,7 @@ const ShoppingCartModal: React.FC = () => {
                       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                         <Image
                           alt={entry.name}
-                          src={entry.image}
+                          src={entry.image ?? ""}
                           width={100}
                           height={100}
                         />
