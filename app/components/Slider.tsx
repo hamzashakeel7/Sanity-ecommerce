@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 
-const Slider = ({ data }) => {
+const Slider: React.FC<{ data: any[] }> = ({ data }) => {
   return (
     <div className="">
       <Swiper
