@@ -6,20 +6,29 @@ import Confetti from "confetti-react";
 
 const ThankYou = () => {
   const [windowScreen, setWindowScreen] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: typeof window !== "undefined" ? window.innerWidth : 0,
+    height: typeof window !== "undefined" ? window.innerHeight : 0,
   });
 
   const detectSize = () => {
-    setWindowScreen({ width: window.innerWidth, height: window.innerHeight });
+    setWindowScreen({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
   };
 
   useEffect(() => {
-    window.addEventListener("resize", detectSize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", detectSize);
+      // Set initial size
+      detectSize();
+    }
     return () => {
-      window.removeEventListener("resize", detectSize);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", detectSize);
+      }
     };
-  }, [windowScreen]);
+  }, []);
 
   return (
     <>
@@ -27,7 +36,7 @@ const ThankYou = () => {
       <div className="flex flex-col items-center justify-center h-screen">
         <h1 className="text-3xl font-bold">Thank You for Your Purchase!</h1>
         <p className="mt-4 text-lg">
-          Your order has been received and you will soon recieve a confirmation
+          Your order has been received and you will soon receive a confirmation
           call.
         </p>
       </div>
